@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 16:49:05 by danielasayu       #+#    #+#             */
+/*   Updated: 2024/04/15 16:49:06 by danielasayu      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../inc/libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

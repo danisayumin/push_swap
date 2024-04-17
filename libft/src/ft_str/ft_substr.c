@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 16:51:07 by danielasayu       #+#    #+#             */
+/*   Updated: 2024/04/15 16:51:07 by danielasayu      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../inc/libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

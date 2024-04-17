@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 19:35:05 by danielasayu       #+#    #+#             */
+/*   Updated: 2024/04/15 19:35:10 by danielasayu      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
@@ -15,7 +27,7 @@ int		ft_handle_pointer(va_list ap);
 int		ft_handle_hexlower(va_list ap);
 int		ft_handle_hexupper(va_list ap);
 int		ft_handle_percent(void);
-int		ft_putchar(char c); 
+int		ft_putchar(char c);
 int		ft_putnbr_base(unsigned long long nb, const char *base);
 
 #endif

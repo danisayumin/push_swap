@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 19:28:45 by danielasayu       #+#    #+#             */
+/*   Updated: 2024/04/15 19:32:26 by danielasayu      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../inc/push_swap.h"
 
-int stack_len(t_stack_node *stack)
+int	stack_len(t_stack_node *stack)
 {
-	int count;
+	int	count;
 
-	if (!stack) 
+	if (!stack)
 		return (0);
 	count = 0;
 	while (stack)
@@ -15,7 +27,7 @@ int stack_len(t_stack_node *stack)
 	return (count);
 }
 
-t_stack_node *find_last(t_stack_node *stack)
+t_stack_node	*find_last(t_stack_node *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -24,7 +36,7 @@ t_stack_node *find_last(t_stack_node *stack)
 	return (stack);
 }
 
-bool stack_sorted(t_stack_node *stack)
+bool	stack_sorted(t_stack_node *stack)
 {
 	if (!stack)
 		return (true);
@@ -37,10 +49,10 @@ bool stack_sorted(t_stack_node *stack)
 	return (true);
 }
 
-t_stack_node *find_min(t_stack_node *stack)
+t_stack_node	*find_min(t_stack_node *stack)
 {
-	long min;
-	t_stack_node *min_node;
+	long			min;
+	t_stack_node	*min_node;
 
 	if (!stack)
 		return (NULL);
@@ -54,13 +66,13 @@ t_stack_node *find_min(t_stack_node *stack)
 		}
 		stack = stack->next;
 	}
-	return (min_node); 
+	return (min_node);
 }
 
-t_stack_node *find_max(t_stack_node *stack)
+t_stack_node	*find_max(t_stack_node *stack)
 {
-	long max;
-	t_stack_node *max_node;
+	long			max;
+	t_stack_node	*max_node;
 
 	if (!stack)
 		return (NULL);

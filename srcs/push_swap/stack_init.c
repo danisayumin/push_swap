@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/15 19:28:39 by danielasayu       #+#    #+#             */
+/*   Updated: 2024/04/15 19:33:32 by danielasayu      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../inc/push_swap.h"
 
-static long ft_atol(const char *s)
+static long	ft_atol(const char *s)
 {
-	long result;
-	int sign;
+	long	result;
+	int		sign;
 
 	result = 0;
-	sign = 1; 
+	sign = 1;
 	while (*s == ' ' || *s == '\t' || *s == '\n' || \
 			*s == '\r' || *s == '\f' || *s == '\v')
 		s++;
@@ -21,10 +33,10 @@ static long ft_atol(const char *s)
 	return (result * sign);
 }
 
-static void append_node(t_stack_node **stack, int n)
+static void	append_node(t_stack_node **stack, int n)
 {
-	t_stack_node *node;
-	t_stack_node *last_node;
+	t_stack_node	*node;
+	t_stack_node	*last_node;
 
 	if (!stack)
 		return ;
@@ -46,10 +58,10 @@ static void append_node(t_stack_node **stack, int n)
 	}
 }
 
-void init_stack_a(t_stack_node **a, char **argv)
+void	init_stack_a(t_stack_node **a, char **argv)
 {
-	long n;
-	int i;
+	long	n;
+	int		i;
 
 	i = 0;
 	while (argv[i])
@@ -60,13 +72,13 @@ void init_stack_a(t_stack_node **a, char **argv)
 		if (n > INT_MAX || n < INT_MIN)
 			free_errors(a);
 		if (error_duplicate(*a, (int)n))
-			free_errors(a); 
+			free_errors(a);
 		append_node(a, (int)n);
 		i++;
 	}
 }
 
-t_stack_node *get_cheapest(t_stack_node *stack)
+t_stack_node	*get_cheapest(t_stack_node *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -79,7 +91,7 @@ t_stack_node *get_cheapest(t_stack_node *stack)
 	return (NULL);
 }
 
-void prep_for_push(t_stack_node **stack,
+void	prep_for_push(t_stack_node **stack,
 						t_stack_node *top_node,
 						char stack_name)
 {
@@ -98,6 +110,6 @@ void prep_for_push(t_stack_node **stack,
 				rb(stack, false);
 			else
 				rrb(stack, false);
-		}	
+		}
 	}
 }
